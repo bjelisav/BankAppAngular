@@ -16,3 +16,5 @@ while($row=mysqli_fetch_assoc($query)){
 
 $jsonFromat= json_encode($arr);
 echo $jsonFromat;
+
+mysqli_close($db);
