@@ -1,4 +1,4 @@
-angular.module('main',["ngRoute","accountsController","editAccountsController","addUserController","dbServices"])
+angular.module('main',["ngRoute","accountsController","editAccountsController","addUserController","dbServices","timeController"])
       .config(function($routeProvider,$locationProvider){
         $locationProvider.hashPrefix("");
         $routeProvider
