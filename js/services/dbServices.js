@@ -1,22 +1,21 @@
 angular.module('dbServices',[])
         .service('db',function($http){
-
+          var self = this;
+          var selectedUser = "";
+          this.selected = {};
           this.sendData = function(obj){
-            $http({
+            return $http({
               method : "POST",
               url : "php/addUser.php",
               data : obj
-            }).then(function(result){
-
-            },function(err){
-              console.log(err);
             })
-
-          }
-          this.data = $http({
-              method : "GET",
-              url : "php/data.php"
-            });
+          };
+          this.data = function(){
+            return $http({
+                method : "GET",
+                url : "php/data.php"
+              });
+          };
           this.deleteUser = function(obj){
             $http({
               method: "POST",
@@ -31,5 +30,10 @@ angular.module('dbServices',[])
               data: obj
             })
           }
-
+          this.selectUser = function(user){
+            self.selected = user;
+          }
+          this.getUser = function(){
+            return self.selected;
+          }
         })

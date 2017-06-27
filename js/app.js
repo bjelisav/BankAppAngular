@@ -1,8 +1,16 @@
-angular.module('main',["ngRoute","accountsController","editAccountsController","addUserController","dbServices","timeController"])
+angular.module('main',[
+              "ngRoute",
+              "accountsController",
+              "editAccountsController",
+              "addUserController",
+              "editUserController",
+              "dbServices",
+              "timeController"
+            ])
       .config(function($routeProvider,$locationProvider){
         $locationProvider.hashPrefix("");
         $routeProvider
-          .when('/accounts',{
+          .when('/',{
             templateUrl : "pages/accounts.html",
             controller : "accountsCtrl"
           })
@@ -13,5 +21,9 @@ angular.module('main',["ngRoute","accountsController","editAccountsController","
           .when('/addUser',{
             templateUrl : "pages/addUser.html",
             controller : "addUserCtrl"
+          })
+          .when('/editUser',{
+            templateUrl : "pages/editUser.html",
+            controller : "editUserCtrl"
           })
       })

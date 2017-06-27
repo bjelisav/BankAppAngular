@@ -11,35 +11,15 @@
     </tr>
   </thead>
   <tbody ng-repeat="account in accounts">
-     <tr>
+    <tr>
       <td>{{account.id}}</td>
       <td>{{account.name}}</td>
       <td>{{account.deposit}}</td>
       <td>{{account.card}}</td>
       <td><button class="btn btn-danger" ng-click="deleteUser(account)">Delete</button></td>
-      <td><button type="button" ng-click = "selectUser(account)" class="btn btn-warning" data-toggle="modal" data-target="#myModal">
-  Edit
-</button></td>
-      </tr>
+      <td><a href="#/editUser" type="button" ng-click = "selectUser(account)" class="btn btn-warning">Edit</a></td>
+    </tr>
   </tbody>
  </table>
- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
 
-        <h4 class="modal-title" id="myModalLabel">Edit user: {{selected.name}}</h4>
-      </div>
-      <div class="modal-body">
-        <input type="text" ng-model="selected.name" class="form-control" placeholder="name"><br>
-        <input type="text" ng-model="selected.deposit" class="form-control" placeholder="deposit"><br>
-        <input type="text" ng-model="selected.card" class="form-control" placeholder="card"><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" ng-click = "editUser(selected)">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
