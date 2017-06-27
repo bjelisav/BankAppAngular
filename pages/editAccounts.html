@@ -1,0 +1,25 @@
+<div class="container col-lg-8 col-lg-offset-2" ng-controller="editAccCtrl">
+  <table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>deposit</th>
+      <th>card</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody ng-repeat="account in accounts">
+    <tr>
+      <td>{{account.id}}</td>
+      <td>{{account.name}}</td>
+      <td>{{account.deposit}}</td>
+      <td>{{account.card}}</td>
+      <td><button class="btn btn-danger" ng-click="deleteUser(account)">Delete</button></td>
+      <td><a href="#/editUser" type="button" ng-click = "selectUser(account)" class="btn btn-warning">Edit</a></td>
+    </tr>
+  </tbody>
+ </table>
+
+</div>

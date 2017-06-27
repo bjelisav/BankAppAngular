@@ -1,0 +1,22 @@
+<div class="container col-lg-8 col-lg-offset-2" ng-controller="accountsCtrl">
+  <table class="table">
+       <thead>
+         <tr>
+           <th>id</th>
+           <th>name</th>
+           <th>deposit</th>
+           <th>card</th>
+         </tr>
+       </thead>
+       <tbody ng-repeat="account in accounts">
+          <tr>
+           <td>{{account.id}}</td>
+           <td>{{account.name}}</td>
+           <td>{{account.deposit}}</td>
+           <td>{{account.card}}</td>
+           </tr>
+       </tbody>
+      </table>
+
+
+</div>
