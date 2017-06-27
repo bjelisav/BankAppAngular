@@ -1,3 +1,12 @@
+<?php 
+session_start();
+if (empty($_SESSION['id'])) {
+  header('Location: index.php');
+  session_unset();
+}
+
+ ?>
+
 <!DOCTYPE html>
  <html lang="en" ng-app='main'>
  <head>
@@ -31,7 +40,7 @@
         </div>
         <span class="well text-left col-lg-2 col-lg-offset-1">{{today | date:'shortTime'}}</span>
       </div>
-       <a href="logOut.php" type="button" name="logOut" class="btn btn-default col-lg-2 col-lg-offset-10">Log Out</a>
+       <a href="php/logOut.php" type="button" name="logOut" class="btn btn-default col-lg-2 col-lg-offset-10">Log Out</a>
       </div>
     </div>
  <ng-view></ng-view>

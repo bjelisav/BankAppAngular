@@ -1,0 +1,18 @@
+DB name : bankappdb
+DB tables: accounts, login
+
+Table structure:
+accounts - 
+id(INT,length:11,PRIMARY,A.I.),
+name(VARCHAR,lenth 100),
+deposit(INT,length:10),
+card(VARCHAR, length: 20).
+
+login - 
+id(INT,length:11,PRIMARY,A.I.),
+username(VARCHAR,length: 40),
+password(VARCHAR,length: 40)
+
+initial data in table "login" :
+username: admin
+password: admin 
